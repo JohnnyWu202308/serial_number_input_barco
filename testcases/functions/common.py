@@ -11,11 +11,11 @@ class common_operation:
 	default_driver = None
 
 	@staticmethod
-	def open_browser(url=common_string.serial_number_url(), set_to_default=True):
+	def open_browser(url=common_string.serial_number_url, set_to_default=True):
 		options = webdriver.ChromeOptions()
 		options.add_argument("--log-level=3")
 		driver = webdriver.Chrome(options=options)
-		driver.get(common_string.serial_number_url())
+		driver.get(url)
 		driver.maximize_window()
 		if set_to_default:
 			common_operation.set_default_driver(driver)
