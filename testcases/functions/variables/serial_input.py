@@ -9,14 +9,20 @@ class serial_input_selector:
 		return "xpath://*[(@id='serial') and contains(@class, 'is-invalid')]"
 	def info_description_txt():
 		return "xpath://*[(normalize-space(text())='Description')]"
+	def info_description_value_txt():
+		return "xpath://*[contains(@class, 'cmp-product-warranty__list')]/dd[1]"
 	def info_part_number_txt():
 		return "xpath://*[(normalize-space(text())='Part number')]"
-	def info_part_number_value_txt(): # since I can't get the selector, just use it temporary, can replace if we can get
-		return "xpath://*[(normalize-space(text())='Part number')]" #"xpath://button[(normalize-space(text())='Get info')]" #"id:serial"  #
+	def info_part_number_value_txt():
+		return "xpath://*[contains(@class, 'cmp-product-warranty__list')]/dd[2]"
 	def info_install_date_txt():
 		return "xpath://*[(normalize-space(text())='Installation date')]"
+	def info_install_date_value_txt():
+		return "xpath://*[contains(@class, 'cmp-product-warranty__list')]/dd[3]"
 	def info_end_date_txt():
 		return "xpath://*[(normalize-space(text())='Warranty end date')]"
+	def info_end_date_value_txt():
+		return "xpath://*[contains(@class, 'cmp-product-warranty__list')]/dd[4]"
 	
 class serial_input_string:
 	def valid_serial():
